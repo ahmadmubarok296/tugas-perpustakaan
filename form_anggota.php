@@ -4,6 +4,7 @@ $status = isset($_GET["status"]) ? $_GET["status"] : "";
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>Pendaftaran Anggota Perpustakaan</title>
@@ -48,7 +49,10 @@ $status = isset($_GET["status"]) ? $_GET["status"] : "";
 
 <body>
 
-    <h1>Pendaftaran Anggota Perpustakaan</h1>
+    <div>
+        <h1>Pendaftaran Anggota Perpustakaan</h1>
+        <a href="data.php">Lihat data anggota perpustakaan</a>
+    </div>
 
     <?php if ($status === "sukses") { ?>
         <p class="sukses">
@@ -60,19 +64,19 @@ $status = isset($_GET["status"]) ? $_GET["status"] : "";
 
         <label for="no_anggota">Nomor Anggota</label>
         <input type="text" id="no_anggota"
-               name="no_anggota" maxlength="15">
+            name="no_anggota" maxlength="15">
 
         <label for="nama_lengkap">Nama Lengkap</label>
         <input type="text" id="nama_lengkap"
-               name="nama_lengkap" maxlength="100">
+            name="nama_lengkap" maxlength="100">
 
         <label for="email">Email</label>
         <input type="email" id="email"
-               name="email" maxlength="100">
+            name="email" maxlength="100">
 
         <label for="no_hp">Nomor HP</label>
         <input type="text" id="no_hp"
-               name="no_hp" maxlength="13">
+            name="no_hp" maxlength="13">
 
         <label for="jenis_anggota">Jenis Anggota</label>
         <select id="jenis_anggota" name="jenis_anggota">
@@ -83,10 +87,11 @@ $status = isset($_GET["status"]) ? $_GET["status"] : "";
         </select>
 
         <label for="alamat">Alamat</label>
-        <textarea id="alamat" name="alamat" rows="4"></textarea>
+        <textarea id="alamat" name="alamat" rows="4"></textarea><br>
 
         <button type="submit">Simpan</button>
 
     </form>
 </body>
+
 </html>

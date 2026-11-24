@@ -15,8 +15,6 @@ $koneksi = mysqli_connect($host, $username, $password, $database);
 // Memeriksa koneksi
 if (!$koneksi) {
   die("Koneksi gagal: ".htmlspecialchars(mysqli_connect_error()));
-} else {
-  echo "Koneksi berhasil ke database: ". htmlspecialchars($database)."";
 }
 
 // Mengatur karakter agar huruf dan simbol tersimpan dengan benar
